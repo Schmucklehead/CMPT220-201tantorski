@@ -31,6 +31,7 @@ public class Problem7_11 {
 	    double sum = 0;
 	    for (int i = 0; i < m.length; i++) {
 	        sum += m[i];
+		
 	    }
 	    return sum / m.length;
 	}
