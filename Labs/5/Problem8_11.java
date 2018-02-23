@@ -19,7 +19,7 @@ public class Problem8_11 {
                 max[i][k] = coinSide;
             }
         }
-        for (int i = 0; i < max.length; i++) {
+        for (int i = 0; i < max.length; i++) {//max value
 
             for (int k = 0; k < max[i].length; k++) {
                 char side = (max[i][k] == 0)? 'H' : 'T';//choose between heads and tails
