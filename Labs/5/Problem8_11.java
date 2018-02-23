@@ -8,29 +8,29 @@ public class Problem8_11 {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter a number between 0 and 511: ");
         int num = input.nextInt();
-        String binary = decimalToBinaryModified(num);
+        String choice = decider(num);
 
         // put 1's and 0's using binary string
-        int bIndex = 0; // binary string index
+        int count = 0; 
         for (int i = 0; i < max.length; i++) {
 
             for (int k = 0; k < max[i].length; k++) {
-                int coinSide = (binary.charAt(bIndex++) == '0') ? 0 : 1;//either one or zero
+                int coinSide = (choice.charAt(count++) == '0') ? 0 : 1;//either one or zero
                 max[i][k] = coinSide;
             }
         }
         for (int i = 0; i < max.length; i++) {
 
             for (int k = 0; k < max[i].length; k++) {
-                char choice = (max[i][k] == 0)? 'H' : 'T';//choose between heads and tails
-                System.out.print(choice + " ");
+                char side = (max[i][k] == 0)? 'H' : 'T';//choose between heads and tails
+                System.out.print(side + " ");
             }
             System.out.println("");
         }
 
     }
 
-    public static String decimalToBinaryModified(int n) {
+    public static String decider(int n) {
 
         StringBuilder string = new StringBuilder();
         while (n != 0) {
@@ -38,7 +38,7 @@ public class Problem8_11 {
             n = n >> 1;
         }
         while (string.length() < 9) {
-        	string.insert(0, "0");
+        	string.insert(0, "0");//insert to the first spot
         }
         return string.toString();
     }
