@@ -35,7 +35,7 @@ public class Problem7_3 {
 				if(array[i] == j)
 					happens++;
 			}
-			if(happens != 0)
+			if(happens != 0) // JA: This is printing too many times
 				if(happens > 1)
 					System.out.println(j + " happens " + happens + " times.");
 				else
