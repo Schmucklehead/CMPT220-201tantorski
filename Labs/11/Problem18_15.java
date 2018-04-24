@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class Probelm18_15 {
-	/** Main method */
+public class Problem18_15 {
+	
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter a string and a character: ");
